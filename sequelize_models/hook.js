@@ -36,8 +36,8 @@ module.exports = function (sequelize, DataTypes) {
             }
         });
     };
-    videoGame.associate = function (models) {
-        videoGame.belongsTo(models.Hook, {
+    VideoGame.associate = function (models) {
+        VideoGame.belongsTo(models.Hook, {
             foreignKey: {
                 allowNull: true
             }

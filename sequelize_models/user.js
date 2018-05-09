@@ -32,15 +32,15 @@ module.exports = function (sequelize, DataTypes) {
       type: Sequelize.DATE
     },
   });
-  hook.associate = function (models) {
-    hook.belongsTo(models.User, {
+  User.associate = function (models) {
+    User.hasMany(models.Hook, {
       foreignKey: {
         allowNull: false
       }
     });
   };
-  post.associate = function (models) {
-    post.belongsTo(models.User, {
+  User.associate = function (models) {
+    User.hasMany(models.Post, {
       foreignKey: {
         allowNull: false
       }
