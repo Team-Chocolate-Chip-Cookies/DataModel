@@ -11,7 +11,6 @@ module.exports = function (sequelize, DataTypes) {
     firstname: {
       type: Sequelize.STRING,
       notEmpty: true,
-
     },
     lastname: {
       type: Sequelize.STRING,
@@ -20,9 +19,6 @@ module.exports = function (sequelize, DataTypes) {
     email: {
       type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        len: [6]
-      }
     },
     Password: {
       type: Sequelize.STRING,
