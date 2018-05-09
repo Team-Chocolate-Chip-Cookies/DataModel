@@ -29,8 +29,8 @@ module.exports = function (sequelize, DataTypes) {
             type: Sequelize.DATE
         },
     });
-    movie.associate = function (models) {
-        movie.belongsTo(models.Hook, {
+    Movie.associate = function (models) {
+        Movie.belongsTo(models.Hook, {
             foreignKey: {
                 allowNull: true
             }
