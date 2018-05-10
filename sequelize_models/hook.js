@@ -3,7 +3,7 @@
 
 module.exports = function (sequelize, DataTypes) {
     var Hook = sequelize.define("Hook", {
-        id: {
+        hookID: {
             primaryKey: true,
             autoIncrement: true,
             type: Sequelize.INTEGER

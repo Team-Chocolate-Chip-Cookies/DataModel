@@ -3,7 +3,7 @@
 
 module.exports = function (sequelize, DataTypes) {
   var User = sequelize.define("User", {
-    id: {
+    userID: {
       primaryKey: true,
       autoIncrement: true,
       type: Sequelize.INTEGER
@@ -18,11 +18,11 @@ module.exports = function (sequelize, DataTypes) {
     },
     email: {
       type: DataTypes.TEXT,
-      allowNull: false,
+      notEmpy: true,
     },
     Password: {
       type: Sequelize.STRING,
-      allowNull: false
+      notEmpy: true,
     },
     last_login: {
       type: Sequelize.DATE
@@ -31,12 +31,19 @@ module.exports = function (sequelize, DataTypes) {
   User.associate = function (models) {
     User.hasMany(models.Hook, {
       foreignKey: {
-        allowNull: false
+        allowNull: false,
       }
     });
   };
   User.associate = function (models) {
     User.hasMany(models.Post, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  User.associate = function (models) {
+    User.hasMany(models.Follow, {
       foreignKey: {
         allowNull: false
       }
