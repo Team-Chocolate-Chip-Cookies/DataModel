@@ -1,7 +1,7 @@
 // user.js
 // Sequelize data model for Users
 
-module.exports = function (sequelize, DataTypes) {
+module.exports = function (sequelize, Sequelize) {
   var User = sequelize.define("User", {
     userID: {
       primaryKey: true,
@@ -17,7 +17,7 @@ module.exports = function (sequelize, DataTypes) {
       notEmpy: true,
     },
     email: {
-      type: DataTypes.TEXT,
+      type: Sequelize.TEXT,
       notEmpy: true,
     },
     Password: {

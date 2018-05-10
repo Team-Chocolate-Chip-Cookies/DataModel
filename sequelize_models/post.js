@@ -1,7 +1,7 @@
 // post.js
 // Sequelize data model user posts
 
-module.exports = function (sequelize, DataTypes) {
+module.exports = function (sequelize, Sequelize) {
     var Post = sequelize.define("Post", {
         postID: {
             primaryKey: true,

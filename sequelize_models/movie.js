@@ -2,7 +2,7 @@
 // Sequelize data model for Movies
 
 
-module.exports = function (sequelize, DataTypes) {
+module.exports = function (sequelize, Sequelize) {
     var Movie = sequelize.define("Movie", {
         movieID: {
             primaryKey: true,

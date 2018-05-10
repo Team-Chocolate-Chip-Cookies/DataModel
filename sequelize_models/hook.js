@@ -1,7 +1,7 @@
 // hook.js
 // Sequelize data model for Hooks
 
-module.exports = function (sequelize, DataTypes) {
+module.exports = function (sequelize, Sequelize) {
     var Hook = sequelize.define("Hook", {
         hookID: {
             primaryKey: true,
@@ -29,19 +29,19 @@ module.exports = function (sequelize, DataTypes) {
             type: Sequelize.DATE
         },
     });
-    Movie.associate = function (models) {
-        Movie.belongsTo(models.Hook, {
-            foreignKey: {
-                allowNull: true
-            }
-        });
-    };
-    VideoGame.associate = function (models) {
-        VideoGame.belongsTo(models.Hook, {
-            foreignKey: {
-                allowNull: true
-            }
-        });
-    };
+    // Movie.associate = function (models) {
+    //     Movie.belongsTo(models.Hook, {
+    //         foreignKey: {
+    //             allowNull: true
+    //         }
+    //     });
+    // };
+    // VideoGame.associate = function (models) {
+    //     VideoGame.belongsTo(models.Hook, {
+    //         foreignKey: {
+    //             allowNull: true
+    //         }
+    //     });
+    // };
     return Hook;
 };
